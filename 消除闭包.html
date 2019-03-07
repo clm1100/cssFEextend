@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getData(){
+            var obj = {a:3}
+            return function(){
+                return obj.a
+            }
+            console.log(555);
+        }
+        var tt = getData()()
+        console.log(tt);
+        setInterval(()=>console.log(tt),1000)
+
+// function leak(arg) {
+//     this.arg = arg;
+// }
+
+// function test() {
+//     var l1= new leak('It is a leak');
+
+//     document.body.addEventListener('click', function() {
+//         l1.arg = 'Here you are!'
+//     })
+// }
+
+// test();
+        </script>
+</body>
+</html>
